@@ -1,0 +1,20 @@
+.HeroContainer{
+    height: 212px;
+    top: 103px;
+    left: 327px;
+    gap: 3rem;
+    color: #fff;
+    display: flex;  
+    justify-content: center;
+    align-items: center;  
+
+}
+.HeroText{
+  align-text: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+}
