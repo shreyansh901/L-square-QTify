@@ -1,0 +1,26 @@
+.outer{
+    padding: 32px;
+}
+.headers{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    }
+    .cardsWrapper{
+        margin-top: 18px;
+       
+    }
+    .wrapper{
+        display: flex;
+        gap:30px;
+        flex-wrap: wrap;
+        
+    }
+    .toggleText{
+        cursor: pointer;
+        color:#34C94B;
+       
+    }
+    .filterWrapper{
+        color:white
+    }

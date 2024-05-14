@@ -1,20 +1,20 @@
 import axios from "axios";
 
 
-export const BACKEND_ENDPOINT="http://qtify-backend-labs.crio.do";
+export const BACKEND_ENDPOINT="https://qtify-backend-labs.crio.do";
 
-export const fromTopAlbum = async () => {
+export const fetchTopAlbums = async () => {
   try {
-       const response= await axios.get(`${BACKEND_ENDPOINT}/album/top`);
+       const response= await axios.get(`${BACKEND_ENDPOINT}/albums/top`);
        return response.data;
        }catch(e) {
         console.error(e);
        }
 }; 
 
-export const fromNewAlbum = async () => {
+export const fetchNewAlbums = async () => {
   try {
-       const response= await axios.get(`${BACKEND_ENDPOINT}/album/new`);
+       const response= await axios.get(`${BACKEND_ENDPOINT}/albums/new`);
        return response.data;
        }catch(e) {
         console.error(e);
