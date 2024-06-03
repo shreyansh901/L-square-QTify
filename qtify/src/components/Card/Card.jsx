@@ -10,10 +10,10 @@ function Card({ data, type }) {
                 const { image, follows, title, slug, songs } = data;
                 return(
                     <Tooltip title={`${songs.length}songs`} placement="top" arrow>
-                    <Link to={`/albums/${slug}`}>
+                    <Link to={`/album/${slug}`}>
                         <div className={styles.wrapper}>
                          <div className={styles.card}>
-                           <img src={image} alt="albums" loading="lazy" />
+                           <img src={image} alt="albums" loading="lazy" className={styles.image} /></div>
                              <div className={styles.banner}>
                                 <Chip
                                   label={`${follows}Follows`}
@@ -21,9 +21,9 @@ function Card({ data, type }) {
                                   className={styles.chip}
                                   />
                              </div> 
-                         </div> 
+                        
                          <div className={styles.titleWrapper}>
-                            <p>{title}</p>
+                            <p className={styles.title}>{title}</p>
                          </div>   
                         </div>
                     </Link>   
@@ -35,15 +35,15 @@ function Card({ data, type }) {
                 return(
                     <div className={styles.wrapper}>
                      <div className={styles.card}>
-                        <img src={image} alt="songs" loading="lazy"/>
+                        <img src={image} alt="songs" loading="lazy" className={styles.image}/></div>
                         <div className={styles.banner}>
                          <div className={styles.pill}>
                            <p>{likes} Likes</p>
                          </div>
                         </div>
-                     </div>
+                     
                           <div className={styles.titleWrapper}>
-                            <p>{title}</p>
+                            <p className={styles.title}>{title}</p>
                           </div>
                     </div>    
                 

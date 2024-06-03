@@ -9,14 +9,11 @@ import React,{ useEffect } from "react";
 
 const Controls =({data}) =>{
     const swiper = useSwiper();
-
     useEffect(() => {
         swiper.slideTo(0);
     }, [data]);
-
     return <></>
 };
-
 function Carousel({data, renderComponent}) {
     return(
         <div className={styles.wrapper}>
@@ -35,8 +32,6 @@ function Carousel({data, renderComponent}) {
                 <SwiperSlide>{renderComponent(ele)}</SwiperSlide>
               ))}
             </Swiper>  
-        </div>
-    );
+        </div>    );
 }
-
 export default Carousel;

@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection/hero.jsx";
 import Homepage from "./pages/HomePage/HomePage.jsx";
 import { Outlet } from "react-router-dom";
 import { fetchTopAlbums, fetchNewAlbums, fetchSongs} from "./components/api/api.js";
+//import Accordion from "./components/Accordion/Accordion.jsx";
 
 function App(){
   const [data, setData] =useState({});
@@ -24,19 +25,15 @@ function App(){
     generateData("songs",fetchSongs);
   },[]);
 
-  /*useEffect(() => {
-    console.log("Top Albums Data:", data.topAlbums);
-  }, [data]); */
-
   const { topAlbums = [], newAlbums =[], songs = [] } = data;
  console.log(data);
-  //const searchData = Array.isArray(topAlbums) ? [...topAlbums, ...newAlbums] : [...newAlbums];
-  //console.log(searchData);
+
    return(
      <>
        <StyledEngineProvider injectFrist>
           <Navbar SearchData={[...topAlbums, ...newAlbums]}/>
           <Outlet context={{data:{topAlbums, newAlbums, songs} }} />
+
        </StyledEngineProvider>
      </>
     );

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import styles from "./Filters.modules.css";
-//import { Box, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
-/*function TabPanel(props) {
+function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
     return(
@@ -22,7 +22,7 @@ import styles from "./Filters.modules.css";
             )}  
         </div>
     );
-}*/
+}
 
 function Filters({ filter, selectedFilterIndex, setSelectedFilterIndex }) {
     const handleChange = (event, newValue ) => {
@@ -49,7 +49,7 @@ function Filters({ filter, selectedFilterIndex, setSelectedFilterIndex }) {
                 }}  
             >
                 {filter.map((ele, idx) =>(
-                    <Tab key={ele.id} className={styles.tab} label= {ele.label} {...a11yProps(idx)}/>
+                    <Tab  className={styles.tab} label= {ele.label} {...a11yProps(idx)}/>
                 ))}
             </Tabs>
         </div>
